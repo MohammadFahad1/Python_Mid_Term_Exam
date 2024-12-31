@@ -11,5 +11,6 @@ class Book:
         self.title = title
         self.author = author
         self.availability = availability
+        Library.entry_book(self)
     
     
