@@ -13,4 +13,11 @@ class Book:
         self.availability = availability
         Library.entry_book(self)
     
-    
+    def borrow_book(self):
+        if self.availability:
+            self.availability = False
+            print(f"The book {self.title} has been borrowed")
+            return True
+        else:
+            print(f"The book {self.title} is already borrowed")
+            return False
