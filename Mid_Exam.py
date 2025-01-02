@@ -21,3 +21,12 @@ class Book:
         else:
             print(f"The book {self.title} is already borrowed")
             return False
+
+    def return_book(self):
+        if not self.availability:
+            self.availability = True
+            print(f"The book {self.title} has been returned")
+            return True
+        else:
+            print(f"The book {self.title} is not borrowed")
+            return False
